@@ -13,21 +13,27 @@ class Pages extends BaseController
             'page' => 'Home',
             'test' => ['satu', 'dua', 'tiga']
         ];
-        echo view('user_layouts/header', $data);
-        echo view('pages/home', $data);
-        echo view('user_layouts/footer');
-        // return view('pages/pages');
+        return view('pages/home', $data);
     }
     public function about()
     {
         $data = [
             'title' => 'About Page | Brand',
-            'page' => 'About'
+            'page' => 'About',
+            'alamat' => [
+                [
+                    'tipe' => 'Rumah',
+                    'alamat' => 'Jl. Kuin Selatan',
+                    'kota' => 'Banjarmasin'
+                ],
+                [
+                    'tipe' => 'Kantor',
+                    'alamat' => 'Jl. KM 0',
+                    'kota' => 'Banjarbaru'
+                ]
+            ]
         ];
-        echo view('user_layouts/header', $data);
-        echo "About";
-        echo view('user_layouts/footer');
-        
+        return view('pages/about', $data);
     }
     public function faq()
     {
@@ -35,20 +41,14 @@ class Pages extends BaseController
             'title' => 'FAQ Page | Brand',
             'page' => 'FAQ'
         ];
-        echo view('user_layouts/header', $data);
-        echo "faq";
-        echo view('user_layouts/footer');
-        
+        return view('pages/faq', $data);
     }
-    public function contact() 
+    public function contact()
     {
         $data = [
             'title' => 'Contact Page | Brand',
             'page' => 'Contact'
         ];
-        echo view('user_layouts/header', $data);
-        echo "Contact";
-        echo view('user_layouts/footer');
-        
+        return view('pages/contact', $data);
     }
 }

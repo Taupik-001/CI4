@@ -1,3 +1,6 @@
+<?= $this->extend('user_layouts/template'); ?>
+
+<?= $this->section('content'); ?>
 <div class="container">
     <div class="row">
         <div class="col-12 col-lg-6">
@@ -10,11 +13,12 @@
             <h1>Hello World</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, perferendis quo aut alias consequatur, hic eos obcaecati laboriosam cumque, numquam modi sed corrupti nisi quas in praesentium facilis optio aliquid et? Eum nostrum, omnis hic debitis obcaecati aliquam consequatur odio, impedit repellat nihil nisi facilis pariatur. Dignissimos culpa nam quia?</p>
             <p>
-                <?php 
-                // d($test);
-                dd($test);
+                <?php
+                d($test);
+                // dd($test);
                 ?>
             </p>
         </div>
     </div>
 </div>
+<?= $this->endSection(); ?>
