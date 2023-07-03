@@ -29,7 +29,27 @@ $routes->set404Override();
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'Home::index');
+// $routes->get('/', 'Home::index');
+// 'any' is anything
+// 'alpha' is alphabet
+// 'num' is number
+// 'alphanum' is alphabet and number
+// 'segment' is anything except /
+// $routes->add('coba', 'Coba::index');
+// $routes->get('coba', 'Coba::index');
+// $routes->get('coba/(:any)/(:num)', 'Coba::index/$1/$2');
+// $routes->get('coba/yep', 'Coba::yep');
+// $routes->get('coba', function () {
+    //     echo "Hello World";
+    // });
+    
+// Routes that on folder
+// $routes->get('users/index', 'Admin\Users::index');
+// $routes->get('users', 'Admin\Users::index');
+$routes->get('/', 'Pages::index');
+$routes->get('/about', 'Pages::about');
+$routes->get('/faq', 'Pages::faq');
+$routes->get('/contact', 'Pages::contact');
 
 /*
  * --------------------------------------------------------------------
