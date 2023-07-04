@@ -2,6 +2,8 @@
 
 namespace Config;
 
+use App\Controllers\Anime;
+
 // Create a new instance of our RouteCollection class.
 $routes = Services::routes();
 
@@ -50,6 +52,10 @@ $routes->get('/', 'Pages::index');
 $routes->get('/about', 'Pages::about');
 $routes->get('/faq', 'Pages::faq');
 $routes->get('/contact', 'Pages::contact');
+
+$routes->get('/anime', 'Anime::index');
+
+$routes->get('/listicon', 'ListIcon::index');
 
 /*
  * --------------------------------------------------------------------

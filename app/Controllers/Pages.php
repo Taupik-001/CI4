@@ -13,7 +13,7 @@ class Pages extends BaseController
             'page' => 'Home',
             'test' => ['satu', 'dua', 'tiga']
         ];
-        return view('pages/home', $data);
+        return view('c_pages/home', $data);
     }
     public function about()
     {
@@ -33,7 +33,7 @@ class Pages extends BaseController
                 ]
             ]
         ];
-        return view('pages/about', $data);
+        return view('c_pages/about', $data);
     }
     public function faq()
     {
@@ -41,7 +41,7 @@ class Pages extends BaseController
             'title' => 'FAQ Page | Brand',
             'page' => 'FAQ'
         ];
-        return view('pages/faq', $data);
+        return view('c_pages/faq', $data);
     }
     public function contact()
     {
@@ -49,6 +49,6 @@ class Pages extends BaseController
             'title' => 'Contact Page | Brand',
             'page' => 'Contact'
         ];
-        return view('pages/contact', $data);
+        return view('c_pages/contact', $data);
     }
 }
